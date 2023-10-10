@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using VectSharp;
 using VectSharp.SVG;
 
-namespace VectSharpDemo.Services
+namespace VectSharpDemo.Examples
 {
     public class EllipticalArc
     {
-        public dynamic DrawEllipticalArc(Page page) 
+        public static dynamic DrawEllipticalArc(Page page)
         {
             Graphics graphics = page.Graphics;
 

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using VectSharp;
 using VectSharp.SVG;
 
-namespace VectSharpDemo.Services
+namespace VectSharpDemo.Examples
 {
     public class PathFigures
     {
-        public dynamic DrawPathFigures(Page page)
+        public static dynamic DrawPathFigures(Page page)
         {
             // Source: https://giorgiobianchini.com/VectSharp/arbitrary_shapes.html
             Graphics graphics = page.Graphics;

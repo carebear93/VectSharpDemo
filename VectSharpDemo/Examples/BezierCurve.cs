@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using VectSharp;
 using VectSharp.SVG;
 
-namespace VectSharpDemo.Services
+namespace VectSharpDemo.Examples
 {
     public class BezierCurve
     {
-       public dynamic DrawBezierCurve(Page page)
+        public static dynamic DrawBezierCurve(Page page)
         {
             // Source: https://giorgiobianchini.com/VectSharp/arbitrary_shapes.html
             Graphics graphics = page.Graphics;
-            
+
             // Create the GraphicsPath object.
             GraphicsPath path = new GraphicsPath();
 

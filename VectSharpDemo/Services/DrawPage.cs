@@ -10,9 +10,9 @@ namespace VectSharpDemo.Services
 {
     public class DrawPage
     {
-        public dynamic CreatePage()
+        public static dynamic CreatePage()
         {
-            Page page = new Page(100, 100);
+            Page page = new Page(1000, 1000);
             return page;
         }
     }
