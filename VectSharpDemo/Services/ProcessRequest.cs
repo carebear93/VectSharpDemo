@@ -13,7 +13,7 @@ namespace VectSharpDemo.Services
 {
     public class ProcessRequest
     {
-        public static async Task ProcessUserRequestAsync<dynamic>(string arg)
+        public static async Task ProcessUserRequestAsync(string userInput)
         {
             var page = await DrawPage.CreatePage();
 
@@ -22,7 +22,7 @@ namespace VectSharpDemo.Services
             int fileNumber = rnd.Next(1, 99999);
             string fileName = $"Bezier Curve{fileNumber}";
 
-            switch (arg)
+            switch (userInput)
             {
                 case "1":
                     var bezierCurve = await BezierCurve.DrawBezierCurve(page);
