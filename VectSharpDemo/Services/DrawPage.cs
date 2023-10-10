@@ -12,7 +12,7 @@ namespace VectSharpDemo.Services
     {
         public static dynamic CreatePage()
         {
-            Page page = new Page(1000, 1000);
+            Page page = new Page(100, 100);
             return page;
         }
     }

@@ -26,7 +26,7 @@ namespace VectSharpDemo.Interface
             }
             else
             {
-                ProcessRequest.ProcessUserRequestAsync(userInput);
+                ProcessRequest.ProcessUserRequest(userInput);
             }
         }
     }

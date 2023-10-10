@@ -1,10 +1,13 @@
-﻿namespace VectSharpDemo
+﻿using VectSharpDemo.Interface;
+
+namespace VectSharpDemo
 {
-    internal class Program
+    public class Program
     {
+        
         static void Main(string[] args)
         {
-            
+            Handle.InterfaceHandle();
         }
     }
 }

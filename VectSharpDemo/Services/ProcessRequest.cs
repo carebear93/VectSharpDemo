@@ -13,31 +13,32 @@ namespace VectSharpDemo.Services
 {
     public class ProcessRequest
     {
-        public static async Task ProcessUserRequestAsync(string userInput)
+        public static void ProcessUserRequest(string userInput)
         {
-            var page = await DrawPage.CreatePage();
+            var page = DrawPage.CreatePage();
 
             // TODO: Check if file name exists, save with an incremented file number
+            // TODO: Just fix filename don't know why I did it like this I was rushing
             Random rnd = new Random();
             int fileNumber = rnd.Next(1, 99999);
-            string fileName = $"Bezier Curve{fileNumber}";
+            string fileName = $"Output{fileNumber}";
 
             switch (userInput)
             {
                 case "1":
-                    var bezierCurve = await BezierCurve.DrawBezierCurve(page);
+                    var bezierCurve = BezierCurve.DrawBezierCurve(page);
                     SaveFile.Save(bezierCurve, fileName);
-                    Console.WriteLine($"SVG saved with the name {fileName} in ....");
+                    Console.WriteLine($"SVG saved with the name {fileName} in VectSharpDemo//bin//Debug//net6.0");
                     break;
                 case "2":
-                    var ellipticalArc = await EllipticalArc.DrawEllipticalArc(page);
+                    var ellipticalArc = EllipticalArc.DrawEllipticalArc(page);
                     SaveFile.Save(ellipticalArc, fileName);
-                    Console.WriteLine($"SVG saved with the name {fileName} in ....");
+                    Console.WriteLine($"SVG saved with the name {fileName} in VectSharpDemo//bin//Debug//net6.0");
                 break;
                 case "3":
-                    var pathFigures = await PathFigures.DrawPathFigures(page);
+                    var pathFigures = PathFigures.DrawPathFigures(page);
                     SaveFile.Save(pathFigures, fileName);
-                    Console.WriteLine($"SVG saved with the name {fileName} in ....");
+                    Console.WriteLine($"SVG saved with the name {fileName} in VectSharpDemo//bin//Debug//net6.0");
                 break;
             }
         }
